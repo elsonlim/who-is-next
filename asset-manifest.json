@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/thoughtworks-jumpstart/who-is-next/static/css/main.f974b630.chunk.css",
-    "main.js": "/thoughtworks-jumpstart/who-is-next/static/js/main.168c3ee1.chunk.js",
-    "main.js.map": "/thoughtworks-jumpstart/who-is-next/static/js/main.168c3ee1.chunk.js.map",
-    "runtime~main.js": "/thoughtworks-jumpstart/who-is-next/static/js/runtime~main.7c82bd0f.js",
-    "runtime~main.js.map": "/thoughtworks-jumpstart/who-is-next/static/js/runtime~main.7c82bd0f.js.map",
-    "static/css/2.266e55a5.chunk.css": "/thoughtworks-jumpstart/who-is-next/static/css/2.266e55a5.chunk.css",
-    "static/js/2.e680240e.chunk.js": "/thoughtworks-jumpstart/who-is-next/static/js/2.e680240e.chunk.js",
-    "static/js/2.e680240e.chunk.js.map": "/thoughtworks-jumpstart/who-is-next/static/js/2.e680240e.chunk.js.map",
-    "index.html": "/thoughtworks-jumpstart/who-is-next/index.html",
-    "precache-manifest.62f7c89e7b787e6219013a10095622bf.js": "/thoughtworks-jumpstart/who-is-next/precache-manifest.62f7c89e7b787e6219013a10095622bf.js",
-    "service-worker.js": "/thoughtworks-jumpstart/who-is-next/service-worker.js",
-    "static/css/2.266e55a5.chunk.css.map": "/thoughtworks-jumpstart/who-is-next/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.f974b630.chunk.css.map": "/thoughtworks-jumpstart/who-is-next/static/css/main.f974b630.chunk.css.map"
+    "main.css": "/who-is-next/static/css/main.f974b630.chunk.css",
+    "main.js": "/who-is-next/static/js/main.e1efa70e.chunk.js",
+    "main.js.map": "/who-is-next/static/js/main.e1efa70e.chunk.js.map",
+    "runtime~main.js": "/who-is-next/static/js/runtime~main.fe17951a.js",
+    "runtime~main.js.map": "/who-is-next/static/js/runtime~main.fe17951a.js.map",
+    "static/css/2.266e55a5.chunk.css": "/who-is-next/static/css/2.266e55a5.chunk.css",
+    "static/js/2.e680240e.chunk.js": "/who-is-next/static/js/2.e680240e.chunk.js",
+    "static/js/2.e680240e.chunk.js.map": "/who-is-next/static/js/2.e680240e.chunk.js.map",
+    "index.html": "/who-is-next/index.html",
+    "precache-manifest.fddd8e9eb34d23918a6e87a54291391c.js": "/who-is-next/precache-manifest.fddd8e9eb34d23918a6e87a54291391c.js",
+    "service-worker.js": "/who-is-next/service-worker.js",
+    "static/css/2.266e55a5.chunk.css.map": "/who-is-next/static/css/2.266e55a5.chunk.css.map",
+    "static/css/main.f974b630.chunk.css.map": "/who-is-next/static/css/main.f974b630.chunk.css.map"
   }
 }
