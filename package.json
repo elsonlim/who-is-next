@@ -38,7 +38,7 @@
     "@testing-library/react": "^9.1.3",
     "gh-pages": "^2.1.1"
   },
-  "homepage": "https://github.com/thoughtworks-jumpstart/who-is-next",
+  "homepage": "https://thoughtworks-jumpstart.github.io/who-is-next",
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx}",
