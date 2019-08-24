@@ -1,0 +1,87 @@
+#members {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  border: 1px solid gray;
+  padding: 0.25em;
+  border-radius: 0.1em;
+  width: 20em;
+  margin: 1em;
+}
+
+#members > input {
+  height: 2em;
+  font-size: 1.5rem;
+  width: 100%;
+  outline: none;
+  border-radius: 0.1em;
+  border: 1px solid gray;
+  margin-bottom: 0.2em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+#members button {
+  width: 5em;
+  align-self: flex-end;
+}
+
+#memebers h2 {
+  font-size: 1.5rem;
+}
+
+.member-item {
+  display: flex;
+  align-items: center;
+  height: 2em;
+  width: 100%;
+  margin-bottom: 0.5em;
+}
+
+.member-item__checkbox-container {
+  width: 2em;
+  height: 100%;
+  border: 1px solid grey;
+
+  border-top-left-radius: 0.3em;
+  border-bottom-left-radius: 0.3em;
+  background-color: gray;
+  cursor: pointer;
+}
+
+.member-item__checkbox-container:hover {
+  background: #0068d9;
+  border-color: #0068d9;
+}
+
+.member-item__checkbox-container .tick {
+  font-size: 1.5rem;
+  height: 100%;
+  position: relative;
+  bottom: 0.1em;
+  color: white;
+}
+
+.member-item__name {
+  height: 100%;
+  border: 1px solid grey;
+  border-left: 0;
+  flex-grow: 1;
+  line-height: 2em;
+
+  border-top-right-radius: 0.3em;
+  border-bottom-right-radius: 0.3em;
+}
+
+.member-item__delete {
+  color: red;
+  min-width: 2rem;
+  font-size: 1.5em;
+  cursor: pointer;
+}
+
+.member-item__delete:hover {
+  transform: scale(1.2, 1.2);
+  text-shadow: 2px 2px yellow;
+}
