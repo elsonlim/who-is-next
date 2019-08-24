@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "7ebfa83ab1d6cc32097f7246a6602e53",
+    "revision": "dfa3157eb9c68e24b8dc6349582f7247",
     "url": "/who-is-next/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/who-is-next/static/css/2.266e55a5.chunk.css"
   },
   {
-    "revision": "11d1351fa1afea2a7aa7",
+    "revision": "cae19761bd5b4c06f929",
     "url": "/who-is-next/static/css/main.f974b630.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/who-is-next/static/js/2.e680240e.chunk.js"
   },
   {
-    "revision": "11d1351fa1afea2a7aa7",
-    "url": "/who-is-next/static/js/main.e1efa70e.chunk.js"
+    "revision": "cae19761bd5b4c06f929",
+    "url": "/who-is-next/static/js/main.2ebe8052.chunk.js"
   },
   {
     "revision": "1bf3a6e19d17757e0c36",
