@@ -10,8 +10,11 @@ function App() {
   return (
     <div className="App">
       <Header />
-      <NameSelector members={members} />
-      <Members members={members} setMembers={setMembers} />
+      <div className={"name-selector"}>
+        <NameSelector members={members} />
+        <Members members={members} setMembers={setMembers} />
+      </div>
+
     </div>
   );
 }

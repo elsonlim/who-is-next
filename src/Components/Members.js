@@ -33,6 +33,7 @@ export const Members = ({ members, setMembers }) => {
 
     return (
       <div id="members">
+        <h2>Members</h2>
         <input
           data-testid="add-member"
           aria-label="members-name"
@@ -44,7 +45,6 @@ export const Members = ({ members, setMembers }) => {
         <Button data-testid={"add-btn"} color="primary" onClick={addMember}>
           Add
         </Button>
-        <h2>Members</h2>
         {membersSelection}
       </div>
     );

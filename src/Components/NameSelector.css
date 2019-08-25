@@ -1,0 +1,29 @@
+.name-selector__display {
+  font-family: lato;
+  font-size: 5rem;
+  color: black;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.name-selector__button {
+  width: 20em;
+  margin-bottom: 5rem;
+}
+
+.name-history {
+  font-size: 1em;
+  border: 5px solid #007CFF;
+  width: 20em;
+  min-height: 15em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.name-history__title {
+  font-size: 1.2em;
+  font-weight: bold;
+  margin: 1em;
+}

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "reactstrap";
-
+import "./NameSelector.css";
 export const getRandomiseNameList = names => {
   return names
     .map(name => ({
@@ -13,15 +13,11 @@ export const getRandomiseNameList = names => {
 
 export const NameHistory = ({ names }) => {
   return (
-    <div>
-      <p>History</p>
-      {[0, 1, 2].map(i => {
+    <div className={"name-history"}>
+      <h3 className={"name-history__title"}>History</h3>
+      {names.map(name => {
         return (
-          !!names[i] && (
-            <p key={`${i}`}>
-              {i + 1}. {names[i]}
-            </p>
-          )
+          <p key={name}>{name}</p>
         );
       })}
     </div>
@@ -89,8 +85,8 @@ export const NameSelector = ({ members }) => {
 
   return (
     <div>
-      <div>{display}</div>
-      <Button data-testid={"getName-btn"} color="primary" onClick={getName}>
+      <div className={"name-selector__display"}>{display}</div>
+      <Button className={"name-selector__button"} data-testid={"getName-btn"} color="primary" onClick={getName}>
         getName
       </Button>
       <NameHistory names={nameHistory} />

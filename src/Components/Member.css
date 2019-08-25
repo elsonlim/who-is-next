@@ -3,11 +3,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  border: 1px solid gray;
-  padding: 0.25em;
-  border-radius: 0.1em;
+  padding: 1em;
+  font-size: 1rem;
+  border: 5px solid #007CFF;
   width: 20em;
-  margin: 1em;
+  min-height: 25em;
+  margin-top: 5em;
 }
 
 #members > input {
@@ -25,10 +26,13 @@
 #members button {
   width: 5em;
   align-self: flex-end;
+  margin-bottom: 1em;
 }
 
-#memebers h2 {
-  font-size: 1.5rem;
+
+#members h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
 }
 
 .member-item {
