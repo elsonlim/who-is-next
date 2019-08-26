@@ -6,6 +6,6 @@ import { Header } from "./Header";
 describe("Header", () => {
   it("should render Header text", () => {
     const { getByText } = render(<Header />);
-    expect(getByText("Who is next")).toBeInTheDocument();
+    expect(getByText("WHO IS NEXT")).toBeInTheDocument();
   });
 });
