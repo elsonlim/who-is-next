@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/who-is-next/static/css/main.beda50d4.chunk.css",
-    "main.js": "/who-is-next/static/js/main.249414cd.chunk.js",
-    "main.js.map": "/who-is-next/static/js/main.249414cd.chunk.js.map",
+    "main.css": "/who-is-next/static/css/main.61268902.chunk.css",
+    "main.js": "/who-is-next/static/js/main.6d547f31.chunk.js",
+    "main.js.map": "/who-is-next/static/js/main.6d547f31.chunk.js.map",
     "runtime~main.js": "/who-is-next/static/js/runtime~main.fe17951a.js",
     "runtime~main.js.map": "/who-is-next/static/js/runtime~main.fe17951a.js.map",
     "static/css/2.266e55a5.chunk.css": "/who-is-next/static/css/2.266e55a5.chunk.css",
-    "static/js/2.99642aae.chunk.js": "/who-is-next/static/js/2.99642aae.chunk.js",
-    "static/js/2.99642aae.chunk.js.map": "/who-is-next/static/js/2.99642aae.chunk.js.map",
+    "static/js/2.1104424b.chunk.js": "/who-is-next/static/js/2.1104424b.chunk.js",
+    "static/js/2.1104424b.chunk.js.map": "/who-is-next/static/js/2.1104424b.chunk.js.map",
     "index.html": "/who-is-next/index.html",
-    "precache-manifest.28f2bd128d4f82b8f6cc728b294f713c.js": "/who-is-next/precache-manifest.28f2bd128d4f82b8f6cc728b294f713c.js",
+    "precache-manifest.818627992becbaab0e52456d97836cd1.js": "/who-is-next/precache-manifest.818627992becbaab0e52456d97836cd1.js",
     "service-worker.js": "/who-is-next/service-worker.js",
     "static/css/2.266e55a5.chunk.css.map": "/who-is-next/static/css/2.266e55a5.chunk.css.map",
-    "static/css/main.beda50d4.chunk.css.map": "/who-is-next/static/css/main.beda50d4.chunk.css.map"
+    "static/css/main.61268902.chunk.css.map": "/who-is-next/static/css/main.61268902.chunk.css.map"
   }
 }
