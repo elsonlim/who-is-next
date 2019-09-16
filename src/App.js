@@ -3,7 +3,12 @@ import "./App.css";
 import { Header } from "./Components/Header";
 import { Members } from "./Components/Members";
 import { NameSelector } from "./Components/NameSelector";
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
 import { Pairs } from "./Components/Pairs";
 
 const getMembersInitialVal = () => {
@@ -29,6 +34,7 @@ function App() {
             component={() => <NameSelector members={members} />}
           />
           <Route path="/pairs" component={() => <Pairs members={members} />} />
+          <Redirect to="/" />
         </Switch>
         <Members members={members} setMembers={saveMembers} />
       </div>
