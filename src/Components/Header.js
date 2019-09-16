@@ -1,10 +1,18 @@
 import React from "react";
-import { Navbar, NavbarBrand } from "reactstrap";
+import { Navbar } from "reactstrap";
+import { Link } from "react-router-dom";
+import "./Header.css";
+
 export const Header = () => {
   return (
     <div id="main-header">
       <Navbar color="primary" dark>
-        <NavbarBrand href="/">WHO IS NEXT</NavbarBrand>
+        <Link className="header-link--title" to="/">
+          WHO IS NEXT
+        </Link>
+        <Link className="header-link--sideText" data-testid="side" to="/pairs">
+          Pairs
+        </Link>
       </Navbar>
     </div>
   );

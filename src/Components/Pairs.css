@@ -1,0 +1,18 @@
+.pairs__title {
+  font-family: lato;
+  font-size: 5rem;
+  color: black;
+  font-weight: bold;
+  line-height: 1.2em;
+  margin-top: 1.2em;
+  margin-bottom: 0.5em;
+}
+
+.pairs__pairedNames {
+  font-family: lato;
+  margin-top: 5em;
+}
+
+.pairs__button {
+  width: 20em;
+}

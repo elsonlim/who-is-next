@@ -1,0 +1,19 @@
+.header-link--title {
+  color: white;
+  font-size: 3rem;
+}
+
+.header-link--title:hover {
+  text-decoration: none;
+  color: aquamarine;
+}
+
+.header-link--sideText {
+  color: white;
+  font-size: 1.5rem;
+}
+
+.header-link--sideText:hover {
+  text-decoration: none;
+  color: aquamarine;
+}

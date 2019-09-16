@@ -112,7 +112,7 @@ export const NameSelector = ({ members }) => {
   };
 
   return (
-    <div>
+    <div data-testid="name-selector">
       <div className={"name-selector__display"}>{display}</div>
       <Button
         className={"name-selector__button"}

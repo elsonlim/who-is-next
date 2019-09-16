@@ -1,0 +1,11 @@
+.pair-names {
+  border: 0.25em dotted rebeccapurple;
+  border-radius: 4px;
+  font-size: 1em;
+  margin: 1em;
+  width: 20em;
+}
+
+.pair-names * {
+  margin: 1em;
+}
