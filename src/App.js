@@ -4,7 +4,7 @@ import { Header } from "./Components/Header";
 import { Members } from "./Components/Members";
 import { NameSelector } from "./Components/NameSelector";
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route,
   Redirect,
@@ -18,7 +18,7 @@ const getMembersInitialVal = () => {
 function App() {
   const [members, setMembers] = useState(getMembersInitialVal());
 
-  const saveMembers = members => {
+  const saveMembers = (members) => {
     setMembers(members);
     localStorage.setItem("members", JSON.stringify(members));
   };
@@ -42,10 +42,12 @@ function App() {
   );
 }
 
-export default () => (
+const AppWithRouter = () => (
   <div>
     <Router>
       <App />
     </Router>
   </div>
 );
+
+export default AppWithRouter;
