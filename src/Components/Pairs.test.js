@@ -4,20 +4,24 @@ import "@testing-library/jest-dom/extend-expect";
 import { Pairs } from "./Pairs";
 
 describe("Pairs", () => {
-  const memebrs = [
-    {
-      name: "john",
-      checked: true,
-    },
-    {
-      name: "peter",
-      checked: true,
-    },
-    {
-      name: "smith",
-      checked: true,
-    },
-  ];
+  let memebrs;
+
+  beforeEach(() => {
+    memebrs = [
+      {
+        name: "john",
+        checked: true,
+      },
+      {
+        name: "peter",
+        checked: true,
+      },
+      {
+        name: "smith",
+        checked: true,
+      },
+    ];
+  });
 
   it("should render Pair who", () => {
     const { getByText } = render(<Pairs members={memebrs} />);
@@ -35,6 +39,15 @@ describe("Pairs", () => {
     const { getByText, queryByText } = render(<Pairs members={memebrs} />);
     fireEvent.click(getByText("Get Pairs"));
     expect(queryByText(/john/)).toBeInTheDocument();
+    expect(queryByText(/peter/)).toBeInTheDocument();
+    expect(queryByText(/smith/)).toBeInTheDocument();
+  });
+
+  it("should render members who are checked", () => {
+    memebrs[0].checked = false;
+    const { getByText, queryByText } = render(<Pairs members={memebrs} />);
+    fireEvent.click(getByText("Get Pairs"));
+    expect(queryByText(/john/)).not.toBeInTheDocument();
     expect(queryByText(/peter/)).toBeInTheDocument();
     expect(queryByText(/smith/)).toBeInTheDocument();
   });

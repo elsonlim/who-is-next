@@ -1,9 +1,10 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 import { Button } from "reactstrap";
 import { PairNames } from "./PairNames";
 import "./Pairs.css";
 
-const getPairs = members => {
+const getPairs = (members) => {
   const pairs = [];
   for (let i = 0; i < members.length; i += 2) {
     pairs.push(
@@ -22,12 +23,13 @@ export const Pairs = ({ members }) => {
 
   const assignMembersToPairs = () => {
     const randomMembers = members
-      .map(name => ({
+      .filter((member) => !!member.checked)
+      .map((name) => ({
         name,
         weight: Math.random(),
       }))
       .sort((a, b) => a.weight - b.weight)
-      .map(nameObj => nameObj.name);
+      .map((nameObj) => nameObj.name);
 
     setRandomPairs(randomMembers);
   };
@@ -43,9 +45,14 @@ export const Pairs = ({ members }) => {
       <Button
         className={"pairs__button"}
         color="primary"
-        onClick={assignMembersToPairs}>
+        onClick={assignMembersToPairs}
+      >
         Get Pairs
       </Button>
     </section>
   );
+};
+
+Pairs.propTypes = {
+  members: PropTypes.array.isRequired,
 };
