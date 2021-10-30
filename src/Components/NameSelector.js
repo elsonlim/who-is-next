@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "reactstrap";
+import { Local_Random_Member_List, Local_History_Key } from "../Commons/StorageKeys";
 import "./NameSelector.css";
+
 export const getRandomiseNameList = names => {
   return names
     .map(name => ({
@@ -35,7 +37,7 @@ export const NameSelector = ({ members }) => {
 
   const [curMembers, setCurMembers] = useState([]);
   const [randomMembersList, setRandomMembersList] = useState(
-    initFromStorage(Local_Random_Member_list)
+    initFromStorage(Local_Random_Member_List)
   );
   const [nameHistory, setNameHistory] = useState(
     initFromStorage(Local_History_Key)
@@ -44,7 +46,7 @@ export const NameSelector = ({ members }) => {
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const saveRandomMembersList = members => {
-    localStorage.setItem(Local_Random_Member_list, JSON.stringify(members));
+    localStorage.setItem(Local_Random_Member_List, JSON.stringify(members));
     setRandomMembersList(members);
   };
 
