@@ -4,8 +4,9 @@
   color: black;
   font-weight: bold;
   line-height: 1.2em;
-  margin-top: 1.2em;
+  margin-top: 0.8em;
   margin-bottom: 0.5em;
+  min-width: 545px;
 }
 
 .button-container {
@@ -15,8 +16,8 @@
 }
 
 .name-selector__button {
-  width: 20em;
-  margin-bottom: 5rem;
+  width: 15em;
+  margin-bottom: 3rem;
 }
 
 .name-history {
