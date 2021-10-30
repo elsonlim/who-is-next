@@ -17,6 +17,11 @@ describe("NameSelector", () => {
     expect(getByText("Get Name")).toBeInTheDocument();
   });
 
+  it("should render 'Reset' Button", () => {
+    const { getByText } = renderNameSelector();
+    expect(getByText("Reset")).toBeInTheDocument();
+  });
+
   it("should show 'Add or Checked Names' when no one is in the list", () => {
     const { getByText } = render(<NameSelector members={[]} />);
     const getNameBtn = getByText("Get Name");
@@ -49,6 +54,36 @@ describe("NameSelector", () => {
     fireEvent.click(getNameBtn);
 
     fireEvent.click(getNameBtn);
+    expect(getByText("WHO IS NEXT?")).toBeInTheDocument();
+  });
+
+  it("should reset when 'Reset' button is clicked'", () => {
+    const { getByText, queryByText } = render(
+      <NameSelector
+        members={[
+          {
+            name: "john",
+            checked: true,
+          },
+          {
+            name: "peter",
+            checked: true,
+          },
+          {
+            name: "smith",
+            checked: true,
+          },
+        ]}
+      />
+    );
+    const getNameBtn = getByText("Get Name");
+    fireEvent.click(getNameBtn);
+    fireEvent.click(getNameBtn);
+    fireEvent.click(getNameBtn);
+    expect(queryByText("WHO IS NEXT?")).not.toBeInTheDocument();
+
+    const resetBtn = getByText("Reset");
+    fireEvent.click(resetBtn);
     expect(getByText("WHO IS NEXT?")).toBeInTheDocument();
   });
 

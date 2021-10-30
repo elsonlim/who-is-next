@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Button } from "reactstrap";
+import { NameReset } from "./NameReset";
 import { Local_Random_Member_List, Local_History_Key } from "../Commons/StorageKeys";
 import "./NameSelector.css";
 
@@ -23,9 +24,6 @@ export const NameHistory = ({ names }) => {
     </div>
   );
 };
-
-const Local_Random_Member_list = "randomMemberList";
-const Local_History_Key = "nameHistory";
 
 const initFromStorage = key => {
   return JSON.parse(localStorage.getItem(key)) || [];
@@ -124,6 +122,10 @@ export const NameSelector = ({ members }) => {
           onClick={getName}>
           Get Name
         </Button>
+        <NameReset
+          setRandomMembersList={setRandomMembersList}
+          setNameHistory={setNameHistory}
+          setDisplay={() => setDisplay(startingDisplay)} />
       </div>
       <NameHistory names={nameHistory} />
     </div>
