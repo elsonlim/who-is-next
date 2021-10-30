@@ -114,13 +114,15 @@ export const NameSelector = ({ members }) => {
   return (
     <div data-testid="name-selector">
       <div className={"name-selector__display"}>{display}</div>
-      <Button
-        className={"name-selector__button"}
-        data-testid={"getName-btn"}
-        color="primary"
-        onClick={getName}>
-        getName
-      </Button>
+      <div className={"button-container"}>
+        <Button
+          className={"name-selector__button"}
+          data-testid={"getName-btn"}
+          color="primary"
+          onClick={getName}>
+          Get Name
+        </Button>
+      </div>
       <NameHistory names={nameHistory} />
     </div>
   );

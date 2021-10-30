@@ -12,14 +12,14 @@ describe("NameSelector", () => {
     expect(getByText("WHO IS NEXT?")).toBeInTheDocument();
   });
 
-  it("should render getName Button", () => {
+  it("should render 'Get Name' Button", () => {
     const { getByText } = renderNameSelector();
-    expect(getByText("getName")).toBeInTheDocument();
+    expect(getByText("Get Name")).toBeInTheDocument();
   });
 
   it("should show 'Add or Checked Names' when no one is in the list", () => {
     const { getByText } = render(<NameSelector members={[]} />);
-    const getNameBtn = getByText("getName");
+    const getNameBtn = getByText("Get Name");
     fireEvent.click(getNameBtn);
     expect(getByText("Add or Checked Names")).toBeInTheDocument();
   });
@@ -43,7 +43,7 @@ describe("NameSelector", () => {
         ]}
       />
     );
-    const getNameBtn = getByText("getName");
+    const getNameBtn = getByText("Get Name");
     fireEvent.click(getNameBtn);
     fireEvent.click(getNameBtn);
     fireEvent.click(getNameBtn);
@@ -64,7 +64,7 @@ describe("NameSelector", () => {
         ]}
       />
     );
-    const getNameBtn = getByText("getName");
+    const getNameBtn = getByText("Get Name");
     fireEvent.click(getNameBtn);
     expect(await findAllByText("john")).toHaveLength(2);
 
@@ -82,7 +82,7 @@ describe("NameSelector", () => {
         ]}
       />
     );
-    const getNameBtn = getByText("getName");
+    const getNameBtn = getByText("Get Name");
     fireEvent.click(getNameBtn);
     expect(queryByText(/WHO IS NEXT?/)).toBe(null);
     render(
@@ -109,7 +109,7 @@ describe("NameSelector", () => {
         ]}
       />
     );
-    const getNameBtn = getByText("getName");
+    const getNameBtn = getByText("Get Name");
     fireEvent.click(getNameBtn);
     expect(queryByText(/WHO IS NEXT?/)).toBe(null);
     render(<NameSelector members={[{ name: "smith", checked: true }]} />, {
@@ -133,7 +133,7 @@ describe("NameSelector", () => {
       <NameSelector members={[...members]} />
     );
 
-    const getNameBtn = getByText("getName");
+    const getNameBtn = getByText("Get Name");
     fireEvent.click(getNameBtn);
     render(<NameSelector members={members} />, { container });
 
