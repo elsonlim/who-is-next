@@ -1,21 +1,22 @@
 import React, { useState, useEffect } from "react";
-import { Button } from "reactstrap";
+import Button from "../Commons/Button";
+
 import "./NameSelector.css";
-export const getRandomiseNameList = names => {
+export const getRandomiseNameList = (names) => {
   return names
-    .map(name => ({
+    .map((name) => ({
       name,
       weight: Math.random(),
     }))
     .sort((a, b) => a.weight - b.weight)
-    .map(nameObj => nameObj.name);
+    .map((nameObj) => nameObj.name);
 };
 
 export const NameHistory = ({ names }) => {
   return (
     <div className={"name-history"}>
       <h3 className={"name-history__title"}>History</h3>
-      {names.map(name => {
+      {names.map((name) => {
         return <p key={name}>{name}</p>;
       })}
     </div>
@@ -25,7 +26,7 @@ export const NameHistory = ({ names }) => {
 const Local_Random_Member_list = "randomMemberList";
 const Local_History_Key = "nameHistory";
 
-const initFromStorage = key => {
+const initFromStorage = (key) => {
   return JSON.parse(localStorage.getItem(key)) || [];
 };
 
@@ -43,12 +44,12 @@ export const NameSelector = ({ members }) => {
   const [display, setDisplay] = useState(startingDisplay);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const saveRandomMembersList = members => {
+  const saveRandomMembersList = (members) => {
     localStorage.setItem(Local_Random_Member_list, JSON.stringify(members));
     setRandomMembersList(members);
   };
 
-  const saveNameHistory = members => {
+  const saveNameHistory = (members) => {
     localStorage.setItem(Local_History_Key, JSON.stringify(members));
     setNameHistory(members);
   };
@@ -63,13 +64,13 @@ export const NameSelector = ({ members }) => {
         return acc;
       }, []);
 
-      let newRandomList = randomMembersList.filter(member =>
+      let newRandomList = randomMembersList.filter((member) =>
         checkedNames.includes(member)
       );
 
       let shouldShuffle = false;
       const combineList = [...randomMembersList, ...nameHistory];
-      checkedNames.forEach(name => {
+      checkedNames.forEach((name) => {
         if (!combineList.includes(name)) {
           newRandomList.push(name);
           shouldShuffle = true;
@@ -93,8 +94,8 @@ export const NameSelector = ({ members }) => {
 
   const getName = () => {
     const memberNameList = members
-      .filter(member => member.checked)
-      .map(member => member.name);
+      .filter((member) => member.checked)
+      .map((member) => member.name);
 
     if (!memberNameList.length) {
       setDisplay(noMemberDisplay);
@@ -114,14 +115,17 @@ export const NameSelector = ({ members }) => {
   return (
     <div data-testid="name-selector">
       <div className={"name-selector__display"}>{display}</div>
-      <Button
-        className={"name-selector__button"}
-        data-testid={"getName-btn"}
-        color="primary"
-        onClick={getName}>
-        getName
-      </Button>
-      <NameHistory names={nameHistory} />
+      <div>
+        <Button
+          className={"name-selector__button"}
+          data-testid={"getName-btn"}
+          color="primary"
+          onClick={getName}
+        >
+          getName
+        </Button>
+        <NameHistory names={nameHistory} />
+      </div>
     </div>
   );
 };
