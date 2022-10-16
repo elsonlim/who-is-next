@@ -1,0 +1,13 @@
+.section__button {
+  margin: 1em;
+}
+
+.pairs-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.pairs-container * {
+  flex: 40%;
+}

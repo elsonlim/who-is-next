@@ -10,7 +10,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Pairs } from "./Components/Pairs";
-import Speedback from "./Components/Speedback";
+import { Speedback } from "./Components/Speedback";
 
 const getMembersInitialVal = () => {
   return JSON.parse(localStorage.getItem("members")) || [];

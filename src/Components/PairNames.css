@@ -1,11 +1,32 @@
 .pair-names {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
   border: 0.25em dotted rebeccapurple;
   border-radius: 4px;
   font-size: 1em;
   margin: 1em;
-  width: 20em;
 }
 
 .pair-names * {
-  margin: 1em;
+  margin: 1em 0
+}
+
+.pair-names * span {
+  margin: 0.5em
+}
+
+.pair-names .left {
+  text-align: right;
+}
+
+.pair-names .right {
+  text-align: left;
+}
+
+.pair-names .connector {
+  color: rebeccapurple;
+  font-size: 0.8em;
 }

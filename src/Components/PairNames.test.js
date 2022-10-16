@@ -8,13 +8,13 @@ describe("PairNames", () => {
     const { queryByText } = render(
       <PairNames name1={"john"} name2={"peter"} />
     );
-    expect(queryByText("1. john")).toBeInTheDocument();
-    expect(queryByText("2. peter")).toBeInTheDocument();
+    expect(queryByText("john")).toBeInTheDocument();
+    expect(queryByText("peter")).toBeInTheDocument();
   });
 
   it("should render both names", () => {
     const { queryByText } = render(<PairNames name1={"john"} />);
-    expect(queryByText("1. john")).toBeInTheDocument();
-    expect(queryByText("2. peter")).not.toBeInTheDocument();
+    expect(queryByText("john")).toBeInTheDocument();
+    expect(queryByText("peter")).not.toBeInTheDocument();
   });
 });

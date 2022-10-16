@@ -6,7 +6,7 @@
   padding: 1em;
   font-size: 1rem;
   border: 5px solid #007cff;
-  width: 20em;
+  min-width: 20em;
   min-height: 25em;
   margin-top: 5em;
 }
