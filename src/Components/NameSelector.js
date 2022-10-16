@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import Button from "../Commons/Button";
+// import Button from "../Commons/Button";
+import { Button } from "reactstrap";
 
 import "./NameSelector.css";
 export const getRandomiseNameList = (names) => {

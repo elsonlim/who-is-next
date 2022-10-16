@@ -9,6 +9,7 @@
 }
 
 .name-selector__button {
+  width: 20em;
   margin-bottom: 1rem;
 }
 
