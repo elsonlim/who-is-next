@@ -10,6 +10,7 @@ import {
   Redirect,
 } from "react-router-dom";
 import { Pairs } from "./Components/Pairs";
+import Speedback from "./Components/Speedback";
 
 const getMembersInitialVal = () => {
   return JSON.parse(localStorage.getItem("members")) || [];
@@ -33,7 +34,16 @@ function App() {
             path="/"
             component={() => <NameSelector members={members} />}
           />
-          <Route path="/pairs" component={() => <Pairs members={members} />} />
+          <Route
+            exact
+            path="/pairs"
+            component={() => <Pairs members={members} />}
+          />
+          <Route
+            exact
+            path="/speedback"
+            component={() => <Speedback members={members} />}
+          />
           <Redirect to="/" />
         </Switch>
         <Members members={members} setMembers={saveMembers} />
