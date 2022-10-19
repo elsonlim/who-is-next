@@ -21,10 +21,10 @@ describe("Header", () => {
     expect(within(getByTestId("side")).getByText("Pairs")).toBeInTheDocument();
   });
 
-  it("should render who-is-next", () => {
+  it("should render Who is next", () => {
     const { getByTestId } = renderHeader();
     expect(
-      within(getByTestId("side")).getByText("who-is-next")
+      within(getByTestId("side")).getByText("Who is next")
     ).toBeInTheDocument();
   });
 });

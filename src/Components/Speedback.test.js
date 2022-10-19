@@ -10,8 +10,8 @@ import {
 describe("Speedback", () => {
   describe("getSpeedbackPairs", () => {
     const cases = [
-      // [["a"], [[["a", undefined]]]],
-      // [["a", "b"], [[["a", "b"]]]],
+      [["a"], [[["a", undefined]]]],
+      [["a", "b"], [[["a", "b"]]]],
       [
         ["a", "b", "c", "d"],
         [
@@ -78,6 +78,73 @@ describe("Speedback", () => {
     ];
     test.each(cases)("given %s should return %s", (input, expected) => {
       expect(extractCheckedMembers(input)).toEqual(expected);
+    });
+  });
+
+  describe("Speedback", () => {
+    const members = [
+      {
+        name: "john",
+        checked: true,
+      },
+      {
+        name: "peter",
+        checked: true,
+      },
+      {
+        name: "smith",
+        checked: true,
+      },
+    ];
+
+    test("should render with start button", () => {
+      const { queryByText } = render(<Speedback members={members} />);
+      expect(queryByText("start")).toBeInTheDocument();
+    });
+
+    test("should render with pair without previous button on first page", () => {
+      const { queryByText } = render(<Speedback members={members} />);
+      fireEvent.click(queryByText("start"));
+
+      expect(queryByText("start")).not.toBeInTheDocument();
+      expect(queryByText("previous")).not.toBeInTheDocument();
+      expect(queryByText("next")).toBeInTheDocument();
+      expect(queryByText("1/3")).toBeInTheDocument();
+    });
+
+    test("should render with pair previous button on second page", () => {
+      const { queryByText } = render(<Speedback members={members} />);
+      fireEvent.click(queryByText("start"));
+      fireEvent.click(queryByText("next"));
+
+      expect(queryByText("start")).not.toBeInTheDocument();
+      expect(queryByText("previous")).toBeInTheDocument();
+      expect(queryByText("next")).toBeInTheDocument();
+      expect(queryByText("2/3")).toBeInTheDocument();
+    });
+
+    test("should render start after last page", () => {
+      const { queryByText } = render(<Speedback members={members} />);
+      fireEvent.click(queryByText("start"));
+      fireEvent.click(queryByText("next"));
+      fireEvent.click(queryByText("next"));
+      fireEvent.click(queryByText("next"));
+
+      expect(queryByText("start")).toBeInTheDocument();
+      expect(queryByText("previous")).not.toBeInTheDocument();
+      expect(queryByText("next")).not.toBeInTheDocument();
+    });
+
+    test("should not render start and previous when back to first page", () => {
+      const { queryByText } = render(<Speedback members={members} />);
+      fireEvent.click(queryByText("start"));
+      fireEvent.click(queryByText("next"));
+      fireEvent.click(queryByText("previous"));
+
+      expect(queryByText("start")).not.toBeInTheDocument();
+      expect(queryByText("previous")).not.toBeInTheDocument();
+      expect(queryByText("next")).toBeInTheDocument();
+      expect(queryByText("1/3")).toBeInTheDocument();
     });
   });
 });

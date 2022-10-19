@@ -42,19 +42,19 @@ export const getSpeedbackPairs = (members) => {
 
 export const Speedback = ({ members }) => {
   const [speedbackPairsSet, setSpeedbackPairsSet] = useState([]);
-  const [page, setPage] = useState(-1);
+  const [pageIndex, setPageIndex] = useState(-1);
 
   const onClickSpeedbackButton = () => {
-    if (page < 0) {
+    if (pageIndex < 0) {
       const extractedMembers = extractCheckedMembers(members);
-      console.log("mem", extractedMembers);
       const pairsSet = getSpeedbackPairs(extractedMembers);
       setSpeedbackPairsSet(pairsSet);
-      setPage(0);
-    } else if (page < speedbackPairsSet.length - 1) {
-      setPage(page + 1);
+      setPageIndex(0);
+    } else if (pageIndex < speedbackPairsSet.length - 1) {
+      setPageIndex(pageIndex + 1);
     } else {
-      setPage(-1);
+      setSpeedbackPairsSet([]);
+      setPageIndex(-1);
     }
   };
 
@@ -62,9 +62,9 @@ export const Speedback = ({ members }) => {
     <section>
       <div className={"pairs-container"}>
         {!!speedbackPairsSet.length &&
-          page >= 0 &&
-          page < speedbackPairsSet.length &&
-          speedbackPairsSet[page].map((pair) => {
+          pageIndex >= 0 &&
+          pageIndex < speedbackPairsSet.length &&
+          speedbackPairsSet[pageIndex].map((pair) => {
             return (
               <PairNames
                 key={`${pair[0]}-${pair[1]}`}
@@ -75,13 +75,27 @@ export const Speedback = ({ members }) => {
           })}
       </div>
 
+      {pageIndex > 0 && (
+        <Button
+          className={"section__button"}
+          color="secondary"
+          onClick={() => setPageIndex(pageIndex - 1)}
+        >
+          previous
+        </Button>
+      )}
       <Button
         className={"section__button"}
         color="primary"
         onClick={onClickSpeedbackButton}
       >
-        {page < 0 ? "start" : "next"}
+        {pageIndex < 0 ? "start" : "next"}
       </Button>
+      <div>
+        {speedbackPairsSet.length
+          ? `${pageIndex + 1}/${speedbackPairsSet.length}`
+          : ""}
+      </div>
     </section>
   );
 };
