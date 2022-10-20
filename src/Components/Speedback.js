@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { Button } from "reactstrap";
 import { PairNames } from "./PairNames";
 import "./Speedback.css";
+import { Timer } from "./Timer";
 
 export const extractCheckedMembers = (members) => {
   const checkedMembers = members
@@ -96,6 +97,7 @@ export const Speedback = ({ members }) => {
           ? `${pageIndex + 1}/${speedbackPairsSet.length}`
           : ""}
       </div>
+      {/* <Timer /> */}
     </section>
   );
 };

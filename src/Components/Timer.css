@@ -1,0 +1,42 @@
+.timer--set {
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.timer--set--text {
+  width: 1.5em;
+  border: none;
+  text-align: center;
+  padding: 0;
+}
+
+.timer--set--icon {
+  display: inline-block;
+  font-size: 1rem;
+  height: 1em;
+  line-height: 0.9em;
+  width: 1em;
+  color:  rgba(66, 98, 255, 1);
+  background-color: rgba(66, 98, 255, 0.12);
+  border-radius: 0.5em;
+  cursor: pointer;
+}
+
+.timer--control--icon {
+  font-size: 1rem;
+  display: inline-block;
+  height: 1em;
+  line-height: 0.9em;
+  width: 1em;
+  color:  white;
+  background-color: rgba(66, 98, 255);
+  border-radius: 0.5em;
+}
+
+.timer--control {
+  border-left: 1px solid rgba(66, 98, 255);
+  margin-left: 1em;
+  padding-left: 1em;
+}
